@@ -1,10 +1,12 @@
+const Button = document.getElementById("Button");
+const NavBar  = document.getElementById('NavBar')
 $(".slider").slick({
 	centerMode: true,
 	centerPadding: "70px",
 	slidesToShow: 3,
-	draggable: false,
+	
 	autoplay: true,
-	autoplaySpeed: 3000,
+	autoplaySpeed: 4000,
 	speed: 2000,
 	responsive: [
 		{
@@ -12,7 +14,7 @@ $(".slider").slick({
 			settings: {
 				arrows: false,
 				centerMode: true,
-				centerPadding: "40px",
+				centerPadding: "70px",
 				slidesToShow: 3,
 			},
 		},
@@ -21,7 +23,7 @@ $(".slider").slick({
 			settings: {
 				arrows: false,
 				centerMode: true,
-				centerPadding: "40px",
+				centerPadding: "70px",
 				slidesToShow: 1,
 			},
 		},
@@ -49,7 +51,7 @@ $(".client-slider").slick({
 	dots: false,
 	autoplay: true,
 	speed: 2000,
-	autoplaySpeed: 3000,
+	autoplaySpeed: 4000,
 	responsive: [
 		{
 			breakpoint: 768,
@@ -63,9 +65,24 @@ $(".client-slider").slick({
 			breakpoint: 480,
 			settings: {
 				arrows: false,
-
+				
 				slidesToShow: 1,
 			},
 		},
 	],
 });
+Button.addEventListener('click', () => {
+	if (NavBar.classList.contains('active-nav')) {
+		NavBar.classList.remove('active-nav')
+		Button.classList.remove("change");
+		document.body.classList.remove('body')
+		
+	}
+	else {
+		NavBar.classList.add('active-nav')
+		Button.classList.add("change");
+		document.body.classList.add("body");
+	}
+}
+)
+
