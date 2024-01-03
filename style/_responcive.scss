@@ -118,10 +118,10 @@
 		color: #fff;
 
 		font-family: Obviously;
-		font-size: 14px;
+		font-size: 12px !important;
 		font-style: normal;
 		font-weight: 550;
-		line-height: 22px;
+		line-height: 14px;
 		/* 145.833% */
 		letter-spacing: 0.48px;
 		max-width: 192px;
@@ -295,6 +295,65 @@
 					width: 100%;
 				}
 			}
+			.slider-main-section {
+			padding-top: 40px;
+			position: relative;
+
+			.main-card {
+				width: 100%;
+				.slider-card {
+					width: 100%;
+					.inner-card {
+						width: 100%;
+						position: relative;
+						.image {
+							width: 100%;
+
+							img {
+								width: 100%;
+							}
+						}
+						.discription {
+							position: absolute;
+							bottom: 10px;
+							z-index: 22;
+							border-radius: 16px;
+							padding: 13px 0;
+							background: rgba(47, 45, 35, 0.91);
+							width: calc(100% - 10px);
+							left: 50%;
+							transform: translateX(-50%);
+							-webkit-transform: translateX(-50%);
+							-moz-transform: translateX(-50%);
+							-ms-transform: translateX(-50%);
+							-o-transform: translateX(-50%);
+							text-align: center;
+							h4 {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+			.slick-slide,
+			.slick-cloned {
+				scale: 0.75 !important;
+				opacity: 0.7;
+			}
+			.slick-active {
+				scale: 0.9 !important;
+				opacity: 1;
+				.main-card {
+					width: calc(100% - 20px);
+					margin: auto;
+				}
+			}
+			.slick-current,
+			.slick-center {
+				opacity: 1;
+				scale: 1 !important;
+			}
+		}
 		}
 	}
 
@@ -692,7 +751,7 @@
 
 					.text {
 						display: flex;
-						align-items: center;
+						align-items: flex-start;
 						justify-content: space-between;
 						flex-direction: column;
 						gap: 20px;
@@ -1992,7 +2051,7 @@
 
 					.text {
 						display: flex;
-						align-items: center;
+						align-items: flex-start;
 						justify-content: space-between;
 						flex-direction: column;
 						gap: 20px;
@@ -2054,7 +2113,9 @@
 				justify-content: space-between;
 				flex-direction: row;
 				gap: 20px;
-
+				button{
+					margin: 0 !important;
+				}
 			}
 			.flex-parts-one {
 				padding-top: 40px;
@@ -3280,7 +3341,7 @@
 
 					.text {
 						display: flex;
-						align-items: center;
+						align-items: flex-start;
 						justify-content: space-between;
 						flex-direction: column;
 						gap: 20px;
@@ -3340,11 +3401,10 @@
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				flex-direction: column;
+				flex-direction: row;
 				gap: 20px;
-
-				button {
-					width: 100%;
+				button{
+					margin: 0 !important;
 				}
 			}
 			.flex-parts-one {
